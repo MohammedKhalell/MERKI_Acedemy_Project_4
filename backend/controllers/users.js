@@ -1,10 +1,10 @@
 const usersModel = require("../models/users");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const CardModel = require("../models/card");
 
 const register = (req, res) => {
   const { name, email, password,role } = req.body;
-  console.log(req.body);
   const user = new usersModel({
     name,
     email,
@@ -15,6 +15,10 @@ const register = (req, res) => {
   user
     .save()
     .then((result) => {
+      console.log(result._id);
+      const newCard = new CardModel({user:result._id});
+      newCard
+      .save()
       res.status(201).json({
         success: true,
         message: `Account Created Successfully`,
@@ -65,7 +69,7 @@ const login = (req, res) => {
         };
 
         const options = {
-          expiresIn: "60m",
+          expiresIn: "60h",
         };
         const token = jwt.sign(payload, process.env.SECRET, options);
         res.status(200).json({

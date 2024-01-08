@@ -2,7 +2,6 @@ const commentsModel = require("../models/comments");
 const productsModel = require("../models/products");
 
 const createNewComment = (req, res) => {
-  console.log(req.token);
   const id = req.params.id;
   const { comment } = req.body;
   const commenter = req.token.userId;

@@ -1,29 +1,27 @@
 const OrderModel = require("../models/order");
+const CardModel = require("../models/card");
 
 const AddToOrder = (req, res) => {
-    const newCard = new OrderModel(
-      req.productName,
-      req.description,
-      req.images,
-      req.price,
-    );
+
+  CardModel.updateOne({user:req.token.userId},{$pull:{products}})
+  .then((result) => {
+    const newOrder = new OrderModel({result});
+    newOrder
+    .save()
+       res.status(201).json({
+     success: true,
+     message: `Order added successfully`,
+     result: result,
+   });
+ })
+ .catch((err) => {
   
-    newCard
-      .save()
-      .then((product) => {
-        res.status(201).json({
-          success: true,
-          message: `Product Added to card`,
-          product: product,
-        });
-      })
-      .catch((err) => {
-        res.status(500).json({
-          success: false,
-          message: `Server Error`,
-          err: err.message,
-        });
-      });
+   res.status(500).json({
+     success: false,
+     message: `Server Error`,
+     err: err.message,
+   });
+ });
 };
 
 module.exports = { AddToOrder };

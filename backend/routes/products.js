@@ -13,6 +13,7 @@ const {
 
 const { createNewComment } = require("../controllers/comments");
 const { AddToCard } = require("../controllers/card");
+const { AddToOrder } = require("../controllers/order");
 
 const authentication = require("../middleware/authentication");
 const authorization = require("../middleware/authorization");
@@ -38,6 +39,8 @@ productsRouter.post(
   authorization("CREATE_COMMENTS"),
   createNewComment
 );
-productsRouter.post("/:id/card",AddToCard);
+productsRouter.put("/:id/card",authentication,AddToCard);
+productsRouter.put("/order",authentication,AddToOrder);
+
 
 module.exports = productsRouter;
