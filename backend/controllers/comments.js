@@ -1,28 +1,26 @@
 const commentsModel = require("../models/comments");
 const productsModel = require("../models/products");
 
+// This function creates a new comment for a specific product
+
 const createNewComment = (req, res) => {
-  const id = req.params.id;
+  const productId = req.params.id;
   const { comment } = req.body;
-  const commenter = req.token.userId;
   const newComment = new commentsModel({
     comment,
-    commenter,
+    commenter: req.token.userId,
   });
   newComment
     .save()
     .then((result) => {
+      console.log("am result---" + result);
       productsModel
-        .findByIdAndUpdate(
-          { _id: id },
-          { $push: { comments: result._id } },
-          { new: true }
-        )
+        .updateOne({ _id: productId }, { $push: { comments: result._id } })
         .then(() => {
           res.status(201).json({
             success: true,
             message: `Comment added`,
-            comment: result,
+            comments: result,
           });
         })
         .catch((err) => {

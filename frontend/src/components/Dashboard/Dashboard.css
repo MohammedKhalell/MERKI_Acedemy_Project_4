@@ -1,0 +1,23 @@
+*{
+  background-color:#d2d2d2;
+}
+
+.categoryTitle{
+text-decoration: none;
+color: #135242;
+font-style: bold;
+font-size: larger;
+background-color: #d2d2d2;
+
+}
+
+.category{
+background-color:gray;
+
+}
+
+.categoryImage{
+  height: 150px;;
+  width: 150px;
+  border-radius: 50%;
+}

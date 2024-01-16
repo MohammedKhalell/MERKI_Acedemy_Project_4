@@ -1,46 +1,37 @@
 const express = require("express");
 
+// Import products controllers
 const {
+  createProduct,
   getAllProducts,
-  getProductsByUser,
-  getProductsByCategory,
-  getProductById,
-  createNewProducts,
-  updateProductsById,
-  deleteProductsById
-  
+  updateProductById,
+  deleteProductById,
+  getProductByCategory,
+  getProductsByTitle
 } = require("../controllers/products");
 
-const { createNewComment } = require("../controllers/comments");
-const { AddToCard } = require("../controllers/card");
-const { AddToOrder } = require("../controllers/order");
+// Import comments controller
+const { createNewComment } = require("./../controllers/comments");
 
+// Middleware
 const authentication = require("../middleware/authentication");
 const authorization = require("../middleware/authorization");
 
+// Create products router
 const productsRouter = express.Router();
 
+productsRouter.post("/", authentication, createProduct);
+
 productsRouter.get("/", authentication, getAllProducts);
-productsRouter.get("/search_1", getProductsByUser);
-productsRouter.get("/search_2/:id", getProductById);
-productsRouter.get("/search_3/:category", getProductsByCategory);
-productsRouter.post(
-  "/",
-  authentication,
-  authorization("CREATE_Products"),
-  createNewProducts
-);
-productsRouter.put("/:id", updateProductsById);
-productsRouter.delete("/:id", deleteProductsById);
 
-productsRouter.post(
-  "/:id/comments",
-  authentication,
-  authorization("CREATE_COMMENTS"),
-  createNewComment
-);
-productsRouter.put("/:id/card",authentication,AddToCard);
-productsRouter.put("/order",authentication,AddToOrder);
+productsRouter.put("/:id", authentication, updateProductById);
 
+productsRouter.delete("/:id", authentication, deleteProductById);
+
+productsRouter.post("/:id/comments", authentication, createNewComment);
+
+productsRouter.get("/search_1", getProductByCategory);
+
+productsRouter.get("/search_2", getProductsByTitle);
 
 module.exports = productsRouter;

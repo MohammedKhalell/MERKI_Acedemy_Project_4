@@ -1,0 +1,16 @@
+.all{
+    display: flex;
+    flex-direction: column;
+}
+.update{
+    flex-direction: column;
+}
+.update button{
+    width: fit-content;
+    margin-bottom: 4%;
+    background-color: #112A46;
+}
+.buttons1{
+    display: flex;
+    justify-content: space-around;
+}

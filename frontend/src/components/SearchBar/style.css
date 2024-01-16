@@ -1,0 +1,42 @@
+.searchInput {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+
+}
+
+.searchfield {
+    width: 100%;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.filter {
+
+    position: absolute;
+    top: 10.5%;
+    right: x;
+    /* z-index: 100; */
+    width: 52.5%;
+}
+
+.filter div {
+    /* background-color: white; */
+    display: flex;
+border-bottom: 1px solid black; 
+background-color: white;   
+}
+.filter p {
+    background-color: white;
+    font-size: large;
+    cursor: pointer;
+}
+.filter p:hover {
+    color: #b11616;}
+.searchimage{
+    border-right: 1px solid black;
+    width: 100px;
+   
+}

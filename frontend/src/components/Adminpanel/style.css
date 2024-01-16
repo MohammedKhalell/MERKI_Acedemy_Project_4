@@ -1,0 +1,24 @@
+.adminpanel{
+    display: flex;
+    flex-direction: column;
+/*     width: fit-content;
+ */    margin: 3% 2%;
+}
+.adminpanel button{
+margin-top: 3%;
+}
+.adminContainer{
+    display: flex;
+    height: 79vh;
+    justify-content: space-between;
+}
+.allproducts{
+    overflow-y: scroll;
+    margin-right: 15%;
+    margin-top: 5%
+}
+.addproducts{
+    margin-right: 35%;
+    margin-top: 5%;
+    width: 20vw;
+}

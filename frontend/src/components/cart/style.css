@@ -1,0 +1,88 @@
+.main {
+  padding: 50px;
+  font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+}
+
+.items {
+  border: solid;
+  display: inline-table;
+  border-color: #40367c;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 400px;
+  width: 200px;
+  font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+  background-color: white;
+  box-shadow: 10px 10px 10px #000000;
+}
+.product-img {
+  width: 120px;
+  height: 32%;
+}
+.total {
+  width: 194px;
+  border: outset;
+  background-color: white;
+  color: #2a2f57;
+  margin: 4px;
+  margin-right: 12px;
+  box-shadow: 5px 5px 10px #000000;
+}
+.button-delete1 {
+  background: #2a2f57;
+  color: white;
+  font-size: unset;
+  font-weight: 700;
+  padding: 6px;
+  font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+  border: outset;
+  box-shadow: 5px 5px 10px #000000;
+}
+.button-delete1:hover {
+  background: white;
+  color: #40367c;
+}
+.buy-message {
+  border: solid;
+  background: white;
+  color: #40367c;
+  border-color: #40367c;
+  margin-bottom: 500px;
+}
+.brand {
+  background-color: #40367c;
+  color: white;
+  padding: 3px;
+  margin: 0;
+}
+.product-name {
+  color: #2a2f57;
+  padding: 5px;
+}
+.total-buy {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .main {
+    grid-template-columns: repeat(1, 230px);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+@media (min-width: 1200px) {
+  .main {
+    grid-template-columns: repeat(3, 300px);
+  }
+}

@@ -1,0 +1,38 @@
+.reg {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 300px;
+  border: solid;
+  color: #40367c;
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: left;
+  background-color: white;
+}
+.personal-info {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-block-color: #40367c;
+  font-size: 20px;
+}
+.button {
+  background: #2a2f57;
+  color: white;
+  font-size: unset;
+  font-weight: 700;
+  border: outset;
+  padding: inherit;
+  font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+}
+.button {
+  background: white;
+  color: #40367c;
+}
+.message {
+  color: #40367c;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+}

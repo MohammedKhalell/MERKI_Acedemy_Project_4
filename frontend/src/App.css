@@ -1,3 +1,12 @@
+* {
+  height: auto;
+}
 .App {
   text-align: center;
+  text-align: -webkit-center;
+  font-size: 0.85em;
+  font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+  background-image: url(https://img.freepik.com/free-vector/neon-abstract-border-dark-purple-background-vector_53876-168214.jpg?w=740&t=st=1705434233~exp=1705434833~hmac=92fe66f23c7856aef6a5d470118c3cb15e443e1f0715f69f0c57725990e2cbc8);
+  background-size: cover;
+    background-attachment: fixed;
 }

@@ -1,0 +1,42 @@
+.reg {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border: solid;
+  color: #40367c;
+  width: 300px;
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 10px #000000;
+  margin-bottom: 200px;
+}
+.personal-info {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-block-color: #40367c;
+  font-size: 20px;
+}
+.button {
+  background: #2a2f57;
+  color: white;
+  font-size: unset;
+  font-weight: 700;
+  padding: inherit;
+  text-align: center;
+  text-decoration: wavy;
+  margin: 10px;
+  border: outset;
+}
+.button:hover {
+  background: white;
+  color: #40367c;
+}
+.message {
+  color: #40367c;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+}

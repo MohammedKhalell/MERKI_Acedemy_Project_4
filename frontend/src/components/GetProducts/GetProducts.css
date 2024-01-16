@@ -1,0 +1,86 @@
+
+*{
+  
+}
+
+
+
+.allProducts{
+display: grid;
+ ;
+}
+
+.updateForm{
+
+}
+
+.updateButtons{
+display: flex;
+flex-direction: column;
+
+
+}
+
+.updateButtonDiv{
+display: flex;
+flex-direction: column;
+}
+
+.productForm{
+/* border-style: groove;
+border-color: black; */
+background-color: ;
+
+}
+
+.product {
+    background-color: rgba(216, 191, 216, 0.418);
+    width: 50%;
+    margin: 10px;
+    padding: 15px;
+    border-style:groove ;
+    border-radius: 5px;
+    display:grid;
+
+
+  }
+  
+  .delete {
+    background-color: rgb(218, 24, 24);
+    width: 30px;
+    float: right;
+  }
+  
+  .deleteDiv{
+display:flex;
+height: 40px;
+justify-content: space-between;
+align-items: baseline;
+
+  }
+
+  .deleteCommentButton{
+    height: 30px;
+  }
+
+  .update {
+    background-color: rgb(67, 95, 253);
+    width: 110px;
+    float: right;
+  }
+  
+  .comment {
+    background-color: #0202fd11;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    padding: 5%;
+    width: 170%;
+    margin-right: 3px;
+    
+  }
+  
+  .commentBtn {
+    background-color: rgb(38, 44, 78);
+    width: 160px;
+    float: center;
+  }

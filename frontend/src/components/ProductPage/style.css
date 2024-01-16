@@ -1,0 +1,132 @@
+.content {
+    display: grid;
+    grid-template-columns: 70% 15%;
+    grid-template-rows: auto  auto auto auto ;
+    grid-template-areas: "title title"
+        "image pay""image x""image x" "description description" "commentreview commentreview" "commentsection commentsection";
+    margin: 1%;
+    row-gap: 50px;
+
+}
+
+.title {
+    grid-area: title;
+}
+
+.productpageimg {
+    border-radius: 30px;
+    grid-area: image;
+
+}
+
+.pay {
+    
+    border: 1px solid #b11616;
+    
+    display: grid;
+grid-template-columns: auto;
+grid-template-rows: 50px 50px 200px;
+}
+
+.commentandreview {
+    grid-area: commentreview;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
+.commentsection {
+    grid-area: commentsection;
+    padding-bottom: 4%;
+}
+.comments{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.price,.quantitydiv,.total{
+    margin-left: 10%;
+}
+.quantitydiv {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.quantity {
+    text-align: center;
+    width: 20%;
+    font-size: 1.8em;
+}
+
+.addtocart {
+    font-size: 1.3em;
+    margin-left: 2%;
+    background-color: #b11616;
+    color: white;
+border: none;
+padding: 10px;
+}
+.addtocart:hover {
+    
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.addtocart:active {
+    background-color: #b11616;
+    color: white;
+    padding: 10px;
+}
+.description{
+    grid-area: description;
+    
+}
+.commentarea{
+    height: 300px;
+    overflow-y: scroll;
+}
+.commentbutton{
+    font-size: 1.3em;
+    background-color: #b11616;
+    color: white;
+border: none;
+padding: 10px;
+}
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
+@keyframes animate {
+    from {background-color: #b11616;
+    color: white;}
+    to {background-color: white;
+    color:#b11616;}
+  }
+  
+.nocomment{
+    margin-top: 1%;
+background-color: #b11616;
+color: white;
+width: fit-content;
+padding: 1%;
+animation: animate 4s ease-in-out infinite
+
+}
+.cartmessage{
+    margin-top: 30%;
+    margin-left: 20%;
+    background-color: #b11616;
+color: white;
+width: fit-content;
+padding: 1%;
+animation: animate 4s ease-in-out infinite
+}

@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-// This function checks if the user logged in
+//---------------------------------
 const authentication = (req, res, next) => {
   try {
     if (!req.headers.authorization) {
@@ -10,14 +10,14 @@ const authentication = (req, res, next) => {
       });
     }
     const token = req.headers.authorization.split(" ").pop();
-    jwt.verify(token, process.env.SECRET, (err, result) => {
+    jwt.verify(token, process.env.SECRET, (err, user) => {
       if (err) {
-        res.status(403).json({
+        return res.status(403).json({
           success: false,
           message: `The token is invalid or expired`,
         });
       } else {
-        req.token = result;
+        req.token = user;
         next();
       }
     });
@@ -29,5 +29,5 @@ const authentication = (req, res, next) => {
     });
   }
 };
-
-module.exports = authentication;
+//------------------------------------
+module.exports = { authentication };
